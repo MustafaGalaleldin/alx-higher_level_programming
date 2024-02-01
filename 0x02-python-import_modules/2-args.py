@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 if __name__ == '__main__':
     from sys import argv
+
     l = len(argv) - 1
     print("{:d} ".format(l), end="")
     if l == 0:
