@@ -7,6 +7,9 @@ if __name__ == '__main__':
     if l == 0:
         print("arguments.")
     else:
-        print("argument:" if l == 1 else "arguments:")
+        if l == 1:
+            print("argument:")
+        else:
+            print("arguments:")
         for idx, ar in enumerate(argv[1:]):
             print("{:d}: {:s}".format(idx + 1, ar))
