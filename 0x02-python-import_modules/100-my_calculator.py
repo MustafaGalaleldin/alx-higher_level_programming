@@ -8,15 +8,16 @@ if __name__ == '__main__':
     if argv[2] not in ("+", "-", "*", "/"):
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
+    a, b = argv[1], argv[3]
     if argv[2] == "+":
         f1 = calculator_1.add
-        print("{:d} + {:d} = {:d}".format(a, b, f1(int(a), int(b))
+        print("{:s} + {:s} = {:d}".format(a, b, f1(int(a), int(b))))
     elif argv[2] == "-":
         f1 = calculator_1.sub
-        print("{:d} - {:d} = {:d}".format(a, b, f1(int(a), int(b))
+        print("{:s} - {:s} = {:d}".format(a, b, f1(int(a), int(b))))
     elif argv[2] == "*":
         f1 = calculator_1.mul
-        print("{:d} * {:d} = {:d}".format(a, b, f1(int(a), int(b))
+        print("{:s} * {:s} = {:d}".format(a, b, f1(int(a), int(b))))
     elif argv[2] == "/":
         f1 = calculator_1.div
-        print("{:d} / {:d} = {:d}".format(a, b, f1(int(a), int(b))
+        print("{:s} / {:s} = {:d}".format(a, b, f1(int(a), int(b))))
