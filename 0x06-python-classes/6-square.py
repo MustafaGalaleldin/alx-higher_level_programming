@@ -37,10 +37,9 @@ class Square:
             for i in range(self.__size):                
                 x = self.__position[0]
                 for j in range(self.__size):
-                    if not self.__position[1]:
-                        while x:
-                            print(" ", end="")
-                            x -= 1
+                    while x:
+                        print(" ", end="")
+                        x -= 1
                     print("#", end='\n' if j == self.__size - 1 else "")
 
     @property
