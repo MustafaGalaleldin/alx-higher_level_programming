@@ -16,5 +16,6 @@ my_square_3.my_print()
 
 print("--")
 
-my_so = Square(0, (3, 0))
+my_so = Square(2, (3, 1, (1, 1)))
+print(len(my_so.position))
 my_so.my_print()
