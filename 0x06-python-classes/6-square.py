@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"square position"
+"square position and printing"
 
 
 class Square:
@@ -15,11 +15,11 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = __size
         if not (
+            len(__position) == 2 and
             isinstance(__position, tuple) and
             isinstance(__position[0], int) and
             isinstance(__position[1], int) and
-            __position[1] >= 0 and __position[0] >= 0 and
-            len(__position) == 2
+            __position[1] >= 0 and __position[0] >= 0
         ):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = __position
@@ -34,9 +34,10 @@ class Square:
             for i in range(self.__size):
                 x = self.__position[0]
                 for j in range(self.__size):
-                    while x:
-                        print("_", end="")
-                        x -= 1
+                    if not self.__position[1]:
+                        while x:
+                            print("_", end="")
+                            x -= 1
                     print("#", end='\n' if j == self.__size - 1 else "")
 
     @property
