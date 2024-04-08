@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+'second module'
+
+
 class Rectangle:
+    'rec with getters and setters'
     def __init__(self, __width=0, __height=0):
         if not isinstance(__width, int):
             raise TypeError("width must be an integer")
