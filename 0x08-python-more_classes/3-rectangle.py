@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-'third module'
+'forth module'
 
 
 class Rectangle:
-    'rec with getters and setters and some methods'
+    '''
+    rec with getters and setters and some methods
+    print rectangle
+    '''
     def __init__(self, __width=0, __height=0):
         if not isinstance(__width, int):
             raise TypeError("width must be an integer")
@@ -39,6 +42,19 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def __str__(self):
+        if not (self.__height and self.__width):
+            return ''
+        else:
+            ret = ""
+            for i in range(self.__height):
+                for j in range(self.__width):
+                    ret += '#'
+                    if j == self. __width - 1:
+                        if i != self.__height - 1:
+                            ret += '\n'
+            return ret
 
     def area(self):
         return self.__height * self.__width
