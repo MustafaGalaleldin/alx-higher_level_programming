@@ -12,7 +12,7 @@ class Student:
     def to_json(self, attrs=None):
         try:
             for a in attrs:
-                if a is not str:
+                if type(a) is not str:
                     return self.__dict__
         except Exception:
             return self.__dict__
