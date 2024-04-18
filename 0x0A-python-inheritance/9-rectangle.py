@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 9th task """
+''' 9th task '''
 BaseGeometry = __import__('7-base_geometery').BaseGeometry
 
 
