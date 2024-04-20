@@ -6,8 +6,7 @@
 My name is John Smith
 
 >>> say_my_name("John") #doctest: +REPORT_NDIFF
-My name is John
-
+My name is John 
 >>> say_my_name()
 Traceback (most recent call last):
 ...
@@ -29,4 +28,4 @@ Traceback (most recent call last):
 TypeError: last_name must be a string
 
 >>> say_my_name("") #doctest: +REPORT_NDIFF
-My name is 
+My name is  
