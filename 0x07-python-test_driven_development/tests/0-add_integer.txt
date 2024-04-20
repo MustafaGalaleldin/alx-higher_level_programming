@@ -1,0 +1,24 @@
+===== Testing addition function =====
+>>> add_integer = __import__('0-add_integer').add_integer
+>>> add_integer(1, 2)
+3
+>>> add_integer(-1, 2)
+1
+>>> add_integer(2)
+100
+>>> add_integer(2, 2)
+4
+>>> add_integer(1, 'musta')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 8, in add_integer
+TypeError: b must be an integer
+>>> add_integer('musta', 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 6, in add_integer
+TypeError: a must be an integer
+>>> add_integer(1, 1.5)
+2
+>>> add_integer(1.5, 1.5)
+2
