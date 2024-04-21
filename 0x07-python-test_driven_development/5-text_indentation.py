@@ -11,7 +11,10 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     mine = ""
     for char in text:
+        if char is ' ' and mine[len(mine) - 1] is '\n':
+            continue
         mine += char
         if char in [':', '.', '?']:
-            mine += '\n\n'
+            mine += '\n' * 2
+
     print(mine)
