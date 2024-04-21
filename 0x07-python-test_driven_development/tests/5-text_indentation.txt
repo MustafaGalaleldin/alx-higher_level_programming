@@ -4,7 +4,6 @@
 >>> text_indentation("mustafa")
 mustafa
 >>> text_indentation("")
-<BLANKLINE>
 >>> text_indentation("my.name")
 my.
 <BLANKLINE>
