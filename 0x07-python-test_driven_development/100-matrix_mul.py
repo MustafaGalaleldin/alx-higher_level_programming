@@ -7,7 +7,7 @@ def matrix_mul(m_a, m_b):
     a function that multiplies 2 matrices
     """
     if type(m_a) is not list:
-        raise TypeError("m_a must be a list ")
+        raise TypeError("m_a must be a list")
 
     if type(m_b) is not list:
         raise TypeError("m_b must be a list ")
@@ -56,8 +56,8 @@ def matrix_mul(m_a, m_b):
     sublst = []
     val, mat_col = [0, 0]
     for mat_row in range(m_a_rows):
-        for i in range(m_a_col):
-            for j in range(m_b_col):
+        for i in range(m_b_col):
+            for j in range(m_a_col):
                 val += m_a[mat_row][j] * m_b[j][mat_col]
             sublst.append(val)
             val = 0
