@@ -10,7 +10,7 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_a must be a list")
 
     if type(m_b) is not list:
-        raise TypeError("m_b must be a list ")
+        raise TypeError("m_b must be a list")
 
     m_a_rows, m_a_col, m_b_rows, m_b_col = [0, 0, 0, 0]
 
