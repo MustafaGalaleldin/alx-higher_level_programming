@@ -79,7 +79,11 @@ class Rectangle(Base):
         """
         prints in stdout the Rectangle instance with the character #
         """
+        for y in range(self.y):
+            print()
         for i in range(self.height):
+            for x in range(self.x):
+                print(' ', end='')
             for j in range(self.width):
                 print('#', end='\n' if j == self.width - 1 else '')
 
@@ -87,3 +91,19 @@ class Rectangle(Base):
         """ for printing """
         return f"[Rectangle] ({self.id}) {self.x}/{self.y}"\
             f" - {self.width}/{self.height}"
+
+    def update(self, *args):
+        """
+        assigns an argument to each attribute
+        """
+        for num, i in enumerate(args):
+            if num == 0:
+                self.id = i
+            elif num == 1:
+                self.width = i
+            elif num == 2:
+                self.height = i
+            elif num == 3:
+                self.x = i
+            elif num == 4:
+                self.y = i
