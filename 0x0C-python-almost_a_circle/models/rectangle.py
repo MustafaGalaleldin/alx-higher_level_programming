@@ -92,18 +92,22 @@ class Rectangle(Base):
         return f"[Rectangle] ({self.id}) {self.x}/{self.y}"\
             f" - {self.width}/{self.height}"
 
-    def update(self, *args):
-        """
-        assigns an argument to each attribute
-        """
-        for num, i in enumerate(args):
-            if num == 0:
-                self.id = i
-            elif num == 1:
-                self.width = i
-            elif num == 2:
-                self.height = i
-            elif num == 3:
-                self.x = i
-            elif num == 4:
-                self.y = i
+    def update2(self, id=None, width=None, height=None, x=None, y=None):
+        ''' updating process '''
+        if id is not None:
+            self.id = id
+        if width is not None:
+            self.width = width
+        if height is not None:
+            self.height = height
+        if x is not None:
+            self.x = x
+        if y is not None:
+            self.y = y
+    def update(self, *args, **kwargs):
+        '''Updates instance attributes via no-keyword & keyword args.'''
+        # print(args, kwargs)
+        if args:
+            self.update2(*args)
+        elif kwargs:
+            self.update2(**kwargs)
