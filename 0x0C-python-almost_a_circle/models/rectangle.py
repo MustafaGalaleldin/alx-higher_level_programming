@@ -41,7 +41,6 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """ x setter decorator"""
         self.__x = value
 
     @property
@@ -51,5 +50,4 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """ y setter decorator"""
         self.__y = value
