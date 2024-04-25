@@ -18,27 +18,25 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """ width getter decorator"""
+        '''Width of this rectangle.'''
         return self.__width
 
     @width.setter
     def width(self, value):
-        """ width setter decorator"""
         self.__width = value
 
     @property
     def height(self):
-        """ heigth getter decorator"""
+        '''Height of this rectangle.'''
         return self.__height
 
     @height.setter
     def height(self, value):
-        """ height setter decorator""" 
         self.__height = value
 
     @property
     def x(self):
-        """ x getter decorator"""
+        '''x of this rectangle.'''
         return self.__x
 
     @x.setter
@@ -48,7 +46,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        """ y getter decorator"""
+        '''y of this rectangle.'''
         return self.__y
 
     @y.setter
