@@ -26,18 +26,22 @@ class Base:
             return "[]"
         return json.dumps(list_dictionaries)
 
+    
     @classmethod
     def save_to_file(cls, list_objs):
         '''
         writes the JSON string representation of list_objs to a file
         '''
         from models.rectangle import Rectangle
-        if list_objs is None:
-            list_objs = []
+
         filename = cls.__name__ + '.json'
+
         with open(filename, 'w') as f:
-            for i in list_objs:
-                f.write(cls.to_json_string(cls.to_dictionary(i)))
+            if list_objs is None or len(list_objs) == 0:
+                f.write(cls.to_json_string([]))
+            else:
+                for i in list_objs:
+                    f.write(cls.to_json_string(i.to_dictionary()))
 
     @staticmethod
     def from_json_string(json_string):
