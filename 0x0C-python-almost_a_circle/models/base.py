@@ -62,23 +62,16 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-        '''def update2(self, id=None, width=None, height=None, x=None, y=None):
-        """ updating process """
-        if id is not None:
-            self.id = id
-        if width is not None:
-            self.width = width
-        if height is not None:
-            self.height = height
-        if x is not None:
-            self.x = x
-        if y is not None:
-            self.y = y'''
-
-    """def update(self, *args, **kwargs):
-        '''Updates instance attributes via no-keyword & keyword args.'''
-        # print(args, kwargs)
-        if args:
-            self.update2(*args)
-        if kwargs:
-            self.update2(**kwargs)"""
+    @classmethod
+    def load_from_file(cls):
+        '''returns a list of instances'''
+        filename = cls.__name__ + '.json'
+        try:
+            with open(filename, 'r') as f:
+                my_list = cls.from_json_string(f.read())
+                list2 = []
+                for dic in my_list:
+                    list2.append(cls.create(**dic))
+                return list2
+        except FileNotFoundError:
+            return []
