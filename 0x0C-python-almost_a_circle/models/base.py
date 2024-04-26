@@ -23,7 +23,7 @@ class Base:
         returns the JSON string representation of list_dictionaries
         '''
         if list_dictionaries is None or len(list_dictionaries) == 0:
-            return "{}"
+            return "[]"
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -31,13 +31,13 @@ class Base:
         '''
         writes the JSON string representation of list_objs to a file
         '''
+        from models.rectangle import Rectangle
         if list_objs is None:
             list_objs = []
-            filename = 'Rectanle.json'
-        filename = list_objs[0].__class__.__name__ + '.json'
+        filename = cls.__name__ + '.json'
         with open(filename, 'w') as f:
             for i in list_objs:
-                f.write(cls.to_json_string(i.__dict__))
+                f.write(cls.to_json_string(cls.to_dictionary(i)))
 
     @staticmethod
     def from_json_string(json_string):
@@ -48,10 +48,10 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        from models.rectangle import Rectangle
         '''returns an instance with all attributes already set'''
+        from models.rectangle import Rectangle
         dummy = Rectangle(1, 1)
-        dummy.update2(**dictionary)
+        dummy.update(**dictionary)
         return dummy
 
         '''def update2(self, id=None, width=None, height=None, x=None, y=None):
