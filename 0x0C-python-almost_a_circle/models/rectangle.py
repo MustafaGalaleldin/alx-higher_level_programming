@@ -117,3 +117,8 @@ class Rectangle(Base):
         ''' returns the dictionary representation of a Rectangle '''
         return {'y': self.y, 'x': self.x, 'id': self.id,
                 'width': self.width, 'height': self.height}
+
+    def to_csv(self):
+        ''' rectangle to csv'''
+        return f"{self.id},{self.width},{self.height},"\
+                "{self.x},{self.y}"

@@ -47,3 +47,8 @@ class Square(Rectangle):
         ''' returns the dictionary representation of a Square '''
         return {'y': self.y, 'x': self.x, 'id': self.id,
                 'size': self.size}
+
+    def to_csv(self):
+        ''' square to csv'''
+        return f"{self.id},{self.size},"\
+            "{self.x},{self.y}"
