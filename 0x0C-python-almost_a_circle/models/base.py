@@ -34,13 +34,13 @@ class Base:
         from models.rectangle import Rectangle
 
         filename = cls.__name__ + '.json'
-
+        if list_objs is not None:
+            list_objs = [o.to_dictionary() for o in list_objs]
         with open(filename, 'w') as f:
             if list_objs is None or len(list_objs) == 0:
                 f.write(cls.to_json_string([]))
             else:
-                for i in list_objs:
-                    f.write(cls.to_json_string(i.to_dictionary()))
+                f.write(cls.to_json_string(list_objs))
 
     @staticmethod
     def from_json_string(json_string):
