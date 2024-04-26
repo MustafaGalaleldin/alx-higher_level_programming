@@ -29,6 +29,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        '''setter'''
         self.validator('width', value, True)
         self.__width = value
 
@@ -39,6 +40,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        '''setter'''
         self.validator('height', value, True)
         self.__height = value
 
@@ -49,6 +51,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        '''setter'''
         self.validator('x', value, False)
         self.__x = value
 
@@ -59,6 +62,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        '''setter'''
         self.validator('y', value, False)
         self.__y = value
 
@@ -117,8 +121,3 @@ class Rectangle(Base):
         ''' returns the dictionary representation of a Rectangle '''
         return {'y': self.y, 'x': self.x, 'id': self.id,
                 'width': self.width, 'height': self.height}
-
-    def to_csv(self):
-        ''' rectangle to csv'''
-        return f"{self.id},{self.width},{self.height},"\
-                "{self.x},{self.y}"
