@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const array = process.argv;
 let count = 0;
 for (let i = 0; array[i]; i++) {

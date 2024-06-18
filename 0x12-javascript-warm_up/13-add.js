@@ -1,3 +1,3 @@
-exports.add = function (a, b) {
+#!/usr/bin/node
   return (a + b);
 };

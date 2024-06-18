@@ -1,3 +1,3 @@
-exports.addMeMaybe = function (number, theFunction) {
+#!/usr/bin/node
   theFunction(++number);
 };

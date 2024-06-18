@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const argv = process.argv;
 let result = 0;
 function factorial (n) {

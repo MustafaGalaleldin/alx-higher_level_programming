@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const array = process.argv;
 if (array.length === 3) {
   const number = Number(array[2]);

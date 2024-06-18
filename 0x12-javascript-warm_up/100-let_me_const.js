@@ -1,2 +1,2 @@
-const myVar = 333;
+#!/usr/bin/node
 module.exports = myVar;

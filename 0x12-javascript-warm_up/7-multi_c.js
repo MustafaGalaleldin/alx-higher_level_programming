@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/node
 const argv = process.argv;
 if (argv.length === 3) {
   const times = Number(argv[2]);
