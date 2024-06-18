@@ -1,4 +1,4 @@
-#!/usr/bin/node
+#!/usr/bin/env node
 const array = process.argv;
 const length = array.length;
 if (length === 2) {
