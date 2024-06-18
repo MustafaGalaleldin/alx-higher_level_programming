@@ -7,7 +7,5 @@ for (let i = 0; array[i]; i++) {
 if (count === 2) {
   console.log('No argument');
 } else {
-  for (let i = 2; i < count; i++) {
-    console.log(array[i]);
-  }
+  console.log(array[2]);
 }

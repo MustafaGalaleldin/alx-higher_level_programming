@@ -6,7 +6,7 @@ if (argv.length === 3) {
     console.log('Missing number of occurrences');
   } else {
     for (let i = 0; i < times; i++) {
-      console.log('C is fu');
+      console.log('C is fun');
     }
   }
 } else {
