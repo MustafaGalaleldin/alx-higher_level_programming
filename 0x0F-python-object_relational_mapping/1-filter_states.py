@@ -16,7 +16,7 @@ if __name__ == '__main__':
                                     passwd=password, db=db, charset='utf8')
         cur = conn.cursor()
         cur.execute("SELECT * FROM states WHERE\
-                    REGEXP_LIKE(states.name, '^N.*') ORDER BY states.id")
+                    states.name LIKE BINARY 'N%' ORDER BY states.id")
         rows = cur.fetchall()
         for row in rows:
             print(row)
