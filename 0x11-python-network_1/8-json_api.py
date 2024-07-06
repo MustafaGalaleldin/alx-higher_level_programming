@@ -12,12 +12,15 @@ if __name__ == '__main__':
         char = sys.argv[1]
     else:
         char = ''
-    response = requests.post(url, {'q': char})
     try:
-        jj = response.json()
-        if not jj:
-            print('No result')
-        else:
-            print('[{}] {}'.format(jj['id'], jj['name']))
-    except requests.exceptions.JSONDecodeError as e:
-        print('Not a valid JSON')
+        response = requests.post(url, {'q': char})
+        try:
+            jj = response.json()
+            if not jj:
+                print('No result')
+            else:
+                print('[{}] {}'.format(jj['id'], jj['name']))
+        except requests.exceptions.JSONDecodeError as e:
+            print('Not a valid JSON')
+    except requests.exceptions.RequestExceptionas as e:
+        pass
