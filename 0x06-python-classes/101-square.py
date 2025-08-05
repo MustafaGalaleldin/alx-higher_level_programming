@@ -84,7 +84,9 @@ class Square:
                         listy.append(" ")
                         x -= 1
                     if j == self.__size - 1:
-                        listy.extend(["#", "\n"])
+                        listy.append("#")
+                        if i != self.__size - 1:
+                            listy.append("\n")
                     else:
                         listy.append("#")
         return "".join(item for item in listy)
