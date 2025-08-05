@@ -72,7 +72,7 @@ class Square:
     def __str__(self):
         listy = []
         if self.__size == 0:
-            listy.append("/n")
+            listy.append("\n")
         else:
             if self.__position[1] > 0:
                 for a in range(self.__position[1]):
