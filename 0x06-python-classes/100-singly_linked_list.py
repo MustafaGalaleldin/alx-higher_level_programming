@@ -6,10 +6,10 @@ class Node(object):
     'Node in Singly linked list'
 
     def __init__(self, data, next_node=None):
-        # if not isinstance(self.data, int):
-        #     raise TypeError('data must be an integer')
-        # if not isinstance(next_node, Node) and next_node:
-        #     raise TypeError('next_node must be a Node object')
+        if not isinstance(data, int):
+            raise TypeError('data must be an integer')
+        if not isinstance(next_node, Node) and next_node:
+            raise TypeError('next_node must be a Node object')
         self.__data = data
         self.__next_node = next_node
 
@@ -63,7 +63,6 @@ class SinglyLinkedList(object):
                         new.next_node = go
                         wait.next_node = new
                         break
-
 
     def __str__(self):
         lil = []
