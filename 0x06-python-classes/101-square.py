@@ -71,22 +71,19 @@ class Square:
 
     def __str__(self):
         listy = []
-        if self.__size == 0:
-            listy.append("\n")
-        else:
-            if self.__position[1] > 0:
-                for a in range(self.__position[1]):
-                    listy.append('\n')
-            for i in range(self.__size):
-                x = self.__position[0]
-                for j in range(self.__size):
-                    while x:
-                        listy.append(" ")
-                        x -= 1
-                    if j == self.__size - 1:
-                        listy.append("#")
-                        if i != self.__size - 1:
-                            listy.append("\n")
-                    else:
-                        listy.append("#")
+        if self.__position[1] > 0:
+            for a in range(self.__position[1]):
+                listy.append('\n')
+        for i in range(self.__size):
+            x = self.__position[0]
+            for j in range(self.__size):
+                while x:
+                    listy.append(" ")
+                    x -= 1
+                if j == self.__size - 1:
+                    listy.append("#")
+                    if i != self.__size - 1:
+                        listy.append("\n")
+                else:
+                    listy.append("#")
         return "".join(item for item in listy)
