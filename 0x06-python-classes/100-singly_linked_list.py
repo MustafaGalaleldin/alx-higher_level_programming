@@ -8,8 +8,9 @@ class Node(object):
     def __init__(self, data, next_node=None):
         if not isinstance(data, int):
             raise TypeError('data must be an integer')
-        if not isinstance(next_node, Node) or next_node:
-            raise TypeError('next_node must be a Node object')
+        if next_node:
+            if not isinstance(next_node, Node):
+                raise TypeError('next_node must be a Node object')
         self.__data = data
         self.__next_node = next_node
 
